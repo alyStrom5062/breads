@@ -1,7 +1,10 @@
-const express = require("express")
+const express = require('express')
 const breads = express.Router()
-breads.get("/", (req, res) => {
-    res.send("This is the index at /breads")
+const Bread = require('../models/bread.js')
+
+// INDEX
+breads.get('/', (req, res) => {
+  res.send(Bread)
 })
 
 module.exports = breads
